@@ -2,9 +2,7 @@
 
 SELECT * from animals WHERE name LIKE '%mon';
 
-SELECT name from animals WHERE 
-      EXTRACT(YEAR FROM date_of_birth) >= 2016 
-      AND EXTRACT(YEAR FROM date_of_birth) <= 2019;
+SELECT name from animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-31';
 
 SELECT name from animals WHERE neutered = TRUE AND escape_attempts < 3;
 
@@ -15,3 +13,5 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 SELECT * FROM animals WHERE neutered = TRUE;                                                                                               ;
 
 SELECT * FROM animals WHERE name != 'Gabumon';
+
+SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
