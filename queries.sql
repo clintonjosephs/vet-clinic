@@ -42,3 +42,11 @@ BEGIN;
 COMMIT WORK;
 
 /* END transaction */
+
+/* Start transaction to delete all records in the animals table */
+
+BEGIN;
+    DELETE FROM animals;
+ROLLBACK;
+
+/* End transaction with rollback */
