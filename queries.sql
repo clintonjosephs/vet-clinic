@@ -26,3 +26,19 @@ BEGIN;
 ROLLBACK TRANSACTION;
 
 /* end transaction query for species column */
+
+/* Start transaction query for updating species column for animals that have name ending in mon and those that do not have species already set */
+
+BEGIN;
+
+    UPDATE animals SET species = 'digimon' WHERE name LIKE 'mon%';
+
+    UPDATE animals SET species = 'pokemon' WHERE species = '';
+
+    /* Confirm updates */
+
+    SELECT * FROM animals;
+
+COMMIT WORK;
+
+/* END transaction */
