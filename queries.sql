@@ -50,3 +50,22 @@ BEGIN;
 ROLLBACK;
 
 /* End transaction with rollback */
+
+/* Start transaction for multiple operations */
+
+BEGIN;
+
+    DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+
+    SAVEPOINT deleteAnimalsDob;
+
+    UPDATE animals SET weight_kg = weight_kg * -1;
+
+    ROLLBACK TO deleteAnimalsDob;
+
+    UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+    RELEASE SAVEPOINT deleteAnimalsDob;
+
+COMMIT;
+/* End transaction */
