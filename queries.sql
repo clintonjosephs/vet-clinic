@@ -69,3 +69,19 @@ BEGIN;
 
 COMMIT;
 /* End transaction */
+
+/* WRITE QUERIES TO ANSWER QUESTIONS */
+
+SELECT COUNT(id) as animals_count FROM animals;
+
+SELECT COUNT(id) as never_tried_escape FROM animals WHERE escape_attempts = 0;
+
+SELECT AVG(weight_kg) as average_weight FROM animals;
+
+SELECT SUM(escape_attempts) as escape_count, neutered FROM animals GROUP BY neutered ORDER BY escape_count DESC LIMIT 1;
+
+SELECT species, MAX(weight_kg) as maximum_weight, MIN(weight_kg) as minimum_weight FROM animals GROUP BY species;
+
+SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+/* END */
