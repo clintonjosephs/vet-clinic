@@ -24,3 +24,13 @@ CREATE TABLE species
          name TEXT,
          PRIMARY KEY(id),
      );
+
+ALTER TABLE animals DROP column species;
+
+ALTER TABLE animals ADD COLUMN species_id INTEGER;
+
+ALTER TABLE animals ADD CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id) ON DELETE CASCADE;
+
+ALTER TABLE animals ADD COLUMN owner_id INTEGER;
+
+ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id) ON DELETE CASCADE;
