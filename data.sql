@@ -29,3 +29,13 @@ INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
 UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
 
 UPDATE animals SET species_id = 1 WHERE species_id IS NULL;
+
+/* Update table with owner information */
+
+UPDATE animals SET owner_id = 1 WHERE id = 1;
+UPDATE animals SET owner_id = 2 WHERE id = 2 OR id = 3;
+UPDATE animals SET owner_id = 3 WHERE id = 4 OR id = 6;
+UPDATE animals SET owner_id = 4 WHERE id = 5 OR id = 7 OR id = 10;
+UPDATE animals SET owner_id = 5 WHERE id = 8 OR id = 9;
+
+/* End Update */
