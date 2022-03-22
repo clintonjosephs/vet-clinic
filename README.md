@@ -22,6 +22,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [@clintonjosephs](https://github.com/clintonjosephs)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/clinton-mbonu)
+- Twitter: [@clintonmbonu2](https://twitter.com/clintonmbonu2)
 
 ## 🤝 Contributing
 
