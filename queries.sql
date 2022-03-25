@@ -264,13 +264,13 @@ LIMIT 1;
 
 /* How many visits were with a vet that did not specialize in that animal's species? */
 
-    SELECT 
-        COUNT(vets.id) 
-    from visits 
-    JOIN animals ON visits.animals_id = animals.id  
-    JOIN vets ON visits.vets_id = vets.id 
-    JOIN specialization ON vets.id = specialization.vet_id 
-    WHERE animals.species_id != specialization.id;
+    SELECT count(*) 
+        FROM visits 
+            JOIN animals ON visits.animals_id = animals.id 
+            JOIN vets ON visits.vets_id = vets.id 
+            LEFT JOIN specialization ON vets.id = specialization.vet_id 
+        WHERE animals.species_id NOT IN 
+            (SELECT species_id FROM specialization WHERE vet_id = vets.id);
 
 /* END */
 
