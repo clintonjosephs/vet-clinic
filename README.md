@@ -16,13 +16,20 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 
-## Author
+## Authors
 
 👤 **Clinton Mbonu**
 
 - GitHub: [@clintonjosephs](https://github.com/clintonjosephs)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/clinton-mbonu)
 - Twitter: [@clintonmbonu2](https://twitter.com/clintonmbonu2)
+
+👤 **Aniekan udo**
+
+- GitHub: [@Anny85-code](https://github.com/Anny85-code)
+- Twitter: [@Annyudo8](https://twitter.com/Anny_udo8)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aniekan-udo-665b65213/)
+
 
 ## 🤝 Contributing
 
