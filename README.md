@@ -1,5 +1,8 @@
 # Vet Clinic Database
 
+![screenshot](./entity_relationship_diagram.png)
+
+
 > This repository implements the use of relational database to create the data structure for a vetima clinic. Implementing queries to create the animals table, insert data of animals and sql to query data that answer a few questions.
 
 ## Built With
